@@ -34,7 +34,7 @@ if __name__ == "__main__":
     while True:
         query = takecommand()
         #time.sleep(0.3)  # allow audio engine to release mic
-
+        #todo: Add more sites
         sites = {
             "youtube": "https://www.youtube.com",
             "google": "https://www.google.com",
@@ -45,7 +45,9 @@ if __name__ == "__main__":
             if f"open {name}" in query:
                 say(f"Opening {name} sir")
                 webbrowser.open(url)
-        # todo: Add a feature to play a specific song
+
+        #todo: Add a feature to play a specific song
+
         if "open music" in query:
             musicpath = r"C:\Users\Zeeshan\Downloads\Video\123.mp4"
             if os.path.exists(musicpath):
