@@ -130,6 +130,14 @@ if __name__ == '__main__':
             else:
                 say("Music file not found")
 
+        if "open notes" in query.lower():
+            notes_path = r"C:\5th Semester"
+            if os.path.exists(notes_path):
+                say("Opening notes sir")
+                os.startfile(notes_path)
+            else:
+                say("Notes not found")
+
 
         elif "the time" in query:
             current_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -139,11 +147,12 @@ if __name__ == '__main__':
             ai(prompt=query)
 
         elif "Jarvis Quit".lower() in query.lower():
+            say(f"Okay Sir, I am leaving. Good Bye!")
             exit()
 
         elif "reset chat".lower() in query.lower():
             chatStr = ""
-            say(f"Sir, the chat has reset")
+            say(f"Sir, the chat has been reset")
 
         else:
             print("Chatting...")
